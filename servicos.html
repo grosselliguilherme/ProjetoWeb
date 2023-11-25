@@ -25,6 +25,7 @@
           <a class="nav-link" aria-current="page" href="index.html">Home</a>
           <a class="nav-link active" href="servicos.html">Serviços</a>
           <a class="nav-link" href="matricula.html">Matrícula</a>
+          <a class="nav-link" href="mapa.html">Mapa</a>
         </div>
       </div>
     </div>
@@ -36,7 +37,7 @@
       <select class="form-select" onchange="mudaServico()" id="selectServico">
         <option value="1">IMC</option>
         <option value="2">Percentual</option>
-        <option value="3">Ordenação</option>
+        <option value="3">Busca CEP</option>
       </select>
       <br>
       <hr>
@@ -56,12 +57,13 @@
         <button class="btn btn-success" onclick="calcularPorcento()">Calcular Percentual</button><br>
         <label id="resultadoPorcento"></label>
       </div>
-      <div id="divOrdenacao">
-        <label for="">Digite sequência númerica</label><br>
-        <input class="form-control" id="ordem" value="0" type="text"><br>
-        <button class="btn btn-success" onclick="calcularOrdenacao()">Ordenar</button><br>
-        <label id="resultadoOrdenacao"></label>
-      </div>
+      <div id="divBuscaCEP">
+        <label for="">Informe o CEP</label>
+        <input id="inputCEP" class="form-control" type="number">
+        <br>
+        <button onclick="buscaEndereco()" class="btn btn-primary">Buscar endereço</button>
+        <p id="pResultadoCEP"></p>
+    </div>
 
     </div>
   </div>
